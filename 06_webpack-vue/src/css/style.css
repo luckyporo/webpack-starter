@@ -1,0 +1,14 @@
+.title {
+  color: red;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.bg-image {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  background-color: red;
+  background-size: contain;
+  background-image: url('../img/nhlt.jpg');
+}
