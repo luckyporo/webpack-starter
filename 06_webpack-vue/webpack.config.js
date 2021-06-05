@@ -3,6 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { DefinePlugin } = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
   entry: './src/index.js',
@@ -63,6 +64,12 @@ module.exports = {
           // }
         }
       },
+      {
+        test: /\.vue$/,
+        use: {
+          loader: 'vue-loader',
+        }
+      },
     ],
   },
   plugins: [
@@ -85,5 +92,6 @@ module.exports = {
         },
       ],
     }),
+    new VueLoaderPlugin()
   ],
 };
